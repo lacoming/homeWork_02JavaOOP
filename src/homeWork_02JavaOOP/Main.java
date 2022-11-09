@@ -1,3 +1,5 @@
+package homeWork_02JavaOOP;
+
 import java.util.Scanner;
 
 public class Main {
