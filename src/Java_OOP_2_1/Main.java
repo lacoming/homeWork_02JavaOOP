@@ -1,4 +1,4 @@
-package Java_OOP_2;
+package Java_OOP_2_1;
 
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;

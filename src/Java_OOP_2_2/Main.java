@@ -1,4 +1,4 @@
-package Java_OOP_3;
+package Java_OOP_2_2;
 import java.util.Scanner;
 
 public class Main {
