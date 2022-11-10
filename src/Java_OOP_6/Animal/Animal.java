@@ -19,4 +19,8 @@ public class Animal implements Skills, Personal_Card {
     @Override
     public void getName() {
     }
+
+    public void setName(String name){
+        System.out.println();
+    };
 }

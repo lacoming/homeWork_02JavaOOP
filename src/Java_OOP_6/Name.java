@@ -7,7 +7,7 @@ public class Name implements Personal_Card {
         this.name = name;
     }
 
-    public String getName() {
-        return name;
+    public void getName() {
+        System.out.println(name);
     }
 }

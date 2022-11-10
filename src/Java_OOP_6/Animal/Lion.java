@@ -1,7 +1,5 @@
 package Java_OOP_6.Animal;
 
-import Java_OOP_6.Animal.Animal;
-
 public class Lion extends Animal {
     @Override
     public void breath() {
@@ -15,6 +13,6 @@ public class Lion extends Animal {
 
     @Override
     public void setName(String name) {
-        super.setName("Лев");
+       setName("Лев");
     }
 }

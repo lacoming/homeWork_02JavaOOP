@@ -13,6 +13,6 @@ public class Bull extends Animal {
 
     @Override
     public void setName(String name) {
-        super.setName("Бык");
+        setName("Бык");
     }
 }
