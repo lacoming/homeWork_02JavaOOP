@@ -12,7 +12,7 @@ import Java_OOP_6.Fish.Shark;
 
 public class Main {
 
-    private static Skills[] generateSkills(){
+    public static Skills[] generateSkills(){
         Skills[] skills = new Skills[10];
 
         skills [0] = new Lion();
@@ -30,8 +30,10 @@ public class Main {
 
     public static void main (String[] args){
 
+        String str;
+
         for (Skills someone : generateSkills()){
-            someone.
+            someone.move();
         }
     }
 }

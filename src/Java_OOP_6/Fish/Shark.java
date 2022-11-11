@@ -7,7 +7,7 @@ public class Shark extends Fish{
     }
 
     @Override
-    public void setName(String name) {
-        super.setName("Акула");
+    public void name() {
+        System.out.println("Акула");
     }
 }

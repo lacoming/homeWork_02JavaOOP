@@ -1,9 +1,9 @@
 package Java_OOP_6.Fish;
 
-import Java_OOP_6.Name;
+import Java_OOP_6.Personal_Card;
 import Java_OOP_6.Skills;
 
-public class Fish extends Name implements Skills {
+public class Fish implements Skills, Personal_Card {
     @Override
     public void breath() {
         System.out.println("Жабрами");
@@ -15,7 +15,7 @@ public class Fish extends Name implements Skills {
     }
 
     @Override
-    public void setName(String name) {
-        super.setName("Рыбы");
+    public void name() {
+        System.out.println("Рыбы");
     }
 }

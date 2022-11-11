@@ -1,9 +1,9 @@
 package Java_OOP_6.Bird;
 
-import Java_OOP_6.Name;
+import Java_OOP_6.Personal_Card;
 import Java_OOP_6.Skills;
 
-public class Bird extends Name implements Skills {
+public class Bird implements Skills, Personal_Card {
     @Override
     public void breath() {
         System.out.println("Воздух в организм птицы поступает через две ноздри, расположенные над клювом. " +
@@ -19,7 +19,7 @@ public class Bird extends Name implements Skills {
     }
 
     @Override
-    public void setName(String name) {
-        super.setName("Птицы");
+    public void name() {
+        System.out.println("Мы класс птиц");
     }
 }

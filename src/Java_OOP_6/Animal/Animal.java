@@ -1,6 +1,5 @@
 package Java_OOP_6.Animal;
 
-import Java_OOP_6.Name;
 import Java_OOP_6.Personal_Card;
 import Java_OOP_6.Skills;
 
@@ -17,10 +16,7 @@ public class Animal implements Skills, Personal_Card {
     }
 
     @Override
-    public void getName() {
+    public void name() {
+        System.out.println("Мы Звери");
     }
-
-    public void setName(String name){
-        System.out.println();
-    };
 }

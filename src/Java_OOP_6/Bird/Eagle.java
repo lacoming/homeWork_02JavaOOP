@@ -7,7 +7,7 @@ public class Eagle extends  Bird{
     }
 
     @Override
-    public void setName(String name) {
-        super.setName("Орёл");
+    public void name() {
+        System.out.println("Орёл");
     }
 }

@@ -12,7 +12,7 @@ public class Lion extends Animal {
     }
 
     @Override
-    public void setName(String name) {
-       setName("Лев");
+    public void name() {
+        System.out.println("Лев");
     }
 }
