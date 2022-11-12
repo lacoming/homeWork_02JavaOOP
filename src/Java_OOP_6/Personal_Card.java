@@ -1,5 +1,8 @@
 package Java_OOP_6;
 
-public interface Personal_Card {
-    void name();
+public class Personal_Card {
+    protected String name;
+
+    public Personal_Card(){
+    }
 }

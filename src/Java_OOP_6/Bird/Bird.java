@@ -3,7 +3,13 @@ package Java_OOP_6.Bird;
 import Java_OOP_6.Personal_Card;
 import Java_OOP_6.Skills;
 
-public class Bird implements Skills, Personal_Card {
+public class Bird extends Personal_Card implements Skills {
+
+
+    public Bird(){
+        name = "Класс Птиц";
+    }
+
     @Override
     public void breath() {
         System.out.println("Воздух в организм птицы поступает через две ноздри, расположенные над клювом. " +
@@ -18,8 +24,5 @@ public class Bird implements Skills, Personal_Card {
         System.out.println("Могут летать, ходить, прыгать, бегать.");
     }
 
-    @Override
-    public void name() {
-        System.out.println("Мы класс птиц");
-    }
+
 }

@@ -3,7 +3,16 @@ package Java_OOP_6.Animal;
 import Java_OOP_6.Personal_Card;
 import Java_OOP_6.Skills;
 
-public class Animal implements Skills, Personal_Card {
+public class Animal extends Personal_Card implements Skills{
+
+
+    public Animal(){
+        name = "Звери";
+    }
+
+    public Animal (String _name){
+        name = _name;
+    }
 
     @Override
     public void breath() {
@@ -15,8 +24,4 @@ public class Animal implements Skills, Personal_Card {
         System.out.println("Ходят, бегают, прыгают, лазают, плавают, летают.");
     }
 
-    @Override
-    public void name() {
-        System.out.println("Мы Звери");
-    }
 }

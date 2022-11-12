@@ -23,7 +23,7 @@ public class Main {
         skills [5] = new Shark();
         skills [6] = new Pike();
         skills [7] = new Fish();
-        skills [8] = new Animal();
+        skills [8] = new Animal("Gbn");
 
         return skills;
     }
@@ -33,7 +33,6 @@ public class Main {
         String str;
 
         for (Skills someone : generateSkills()){
-            someone.move();
         }
     }
 }

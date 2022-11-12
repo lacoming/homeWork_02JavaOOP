@@ -1,6 +1,13 @@
 package Java_OOP_6.Animal;
 
 public class Bull extends Animal {
+
+
+
+    public Bull (){
+        name = "Бык";
+    }
+
     @Override
     public void breath (){
         System.out.println("Дышит легкими, может пыжить носом.");
@@ -11,8 +18,5 @@ public class Bull extends Animal {
         System.out.println("Парнокопытное, может скакать и бодаться.");
     }
 
-    @Override
-    public void name() {
-        System.out.println("Бык");
-    }
+
 }

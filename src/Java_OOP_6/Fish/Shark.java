@@ -6,8 +6,4 @@ public class Shark extends Fish{
         System.out.println("Плаваю под водой, и, как любой хищник, ем других существ.");
     }
 
-    @Override
-    public void name() {
-        System.out.println("Акула");
-    }
 }
