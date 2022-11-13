@@ -2,8 +2,16 @@ package Java_OOP_6.Bird;
 
 public class Penguin extends Bird {
 
-    public Penguin (){
-        name = "Пингвин";
+    private final String name = "ПИНГВИН";
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public void setName(String name) {
+        super.setName(this.name);
     }
 
     @Override

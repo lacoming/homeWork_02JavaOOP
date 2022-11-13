@@ -2,10 +2,16 @@ package Java_OOP_6.Animal;
 
 public class Bull extends Animal {
 
+    private final String name = "БЫК";
 
+    @Override
+    public String getName() {
+        return name;
+    }
 
-    public Bull (){
-        name = "Бык";
+    @Override
+    public void setName(String name) {
+        super.setName(this.name);
     }
 
     @Override

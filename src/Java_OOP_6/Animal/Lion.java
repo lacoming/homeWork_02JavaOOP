@@ -2,8 +2,16 @@ package Java_OOP_6.Animal;
 
 public class Lion extends Animal {
 
-    public Lion (){
-        name = "Лев";
+    private final String name = "ЛЕВ";
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public void setName(String name) {
+        super.setName(this.name);
     }
 
     @Override

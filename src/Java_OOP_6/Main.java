@@ -10,10 +10,12 @@ import Java_OOP_6.Fish.Fish;
 import Java_OOP_6.Fish.Pike;
 import Java_OOP_6.Fish.Shark;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static Skills[] generateSkills(){
-        Skills[] skills = new Skills[10];
+        Skills[] skills = new Skills[9];
 
         skills [0] = new Lion();
         skills [1] = new Bull();
@@ -23,16 +25,23 @@ public class Main {
         skills [5] = new Shark();
         skills [6] = new Pike();
         skills [7] = new Fish();
-        skills [8] = new Animal("Gbn");
+        skills [8] = new Animal();
 
         return skills;
     }
 
     public static void main (String[] args){
 
-        String str;
+        System.out.println("Напишите номер, понравившегося существа: ");
 
-        for (Skills someone : generateSkills()){
+        for (int i = 0; i < generateSkills().length; i++){
+            System.out.println((i + 1) + " " + Skills.class.getName());
         }
+
+        Scanner scan = new Scanner(System.in);
+
+        int number = scan.nextInt();
+
+
     }
 }

@@ -2,8 +2,16 @@ package Java_OOP_6.Bird;
 
 public class Eagle extends  Bird{
 
-    public Eagle (){
-        name = "Орёл";
+    private final String name = "Орёл";
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public void setName(String name) {
+        super.setName(this.name);
     }
 
     @Override

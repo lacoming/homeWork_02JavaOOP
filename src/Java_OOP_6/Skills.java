@@ -5,4 +5,6 @@ public interface Skills {
     void move();
     void breath();
 
+    String getName();
+
 }

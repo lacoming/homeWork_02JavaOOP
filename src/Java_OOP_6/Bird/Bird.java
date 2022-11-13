@@ -5,9 +5,16 @@ import Java_OOP_6.Skills;
 
 public class Bird extends Personal_Card implements Skills {
 
+    private String name = "ПТИЦЫ";
 
-    public Bird(){
-        name = "Класс Птиц";
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public void setName(String name) {
+        super.setName(this.name);
     }
 
     @Override
