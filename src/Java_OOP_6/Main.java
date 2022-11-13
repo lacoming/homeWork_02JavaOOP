@@ -32,15 +32,25 @@ public class Main {
 
     public static void main (String[] args){
 
+        Skills[] skills = generateSkills();
+
         System.out.println("Напишите номер, понравившегося существа: ");
 
-        for (int i = 0; i < generateSkills().length; i++){
-            System.out.println((i + 1) + " " + Skills.class.getName());
+        for (int i = 0; i < skills.length; i++){
+
+            System.out.println((i) + " " + skills[i].getName());
         }
 
         Scanner scan = new Scanner(System.in);
 
         int number = scan.nextInt();
+
+        for (int i = 0; i < skills.length; i++){
+            if(number == i) {
+                skills[i].move();
+                skills[i].breath();
+            }
+        }
 
 
     }
