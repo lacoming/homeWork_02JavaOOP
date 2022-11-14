@@ -1,4 +1,4 @@
-package Additional_Tasks_5;
+package Additional_Tasks.Additional_Tasks_5;
 import java.util.Scanner;
 
 public class Main {

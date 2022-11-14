@@ -1,4 +1,4 @@
-package Additional_Tasks_Cycle_2;
+package Additional_Tasks.Additional_Tasks_Cycle_2;
 import java.util.Scanner;
 
 public class Main {

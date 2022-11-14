@@ -1,4 +1,4 @@
-package Additional_Tasks_Massive;
+package Additional_Tasks.Additional_Tasks_Massive;
 import java.util.Random;
 
 public class Main {

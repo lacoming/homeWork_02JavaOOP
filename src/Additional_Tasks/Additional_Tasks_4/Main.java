@@ -1,4 +1,4 @@
-package Additional_Tasks_4;
+package Additional_Tasks.Additional_Tasks_4;
 import java.util.Arrays;
 import java.util.Scanner;
 
