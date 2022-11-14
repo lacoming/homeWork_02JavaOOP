@@ -27,10 +27,9 @@ public class Main {
             sum += i;
         }
         System.out.printf("The sum of all numbers from 0 to %d is %d", x, sum);
-
-
-
+        System.out.println();
         System.out.println ("Please enter your score: ");
+
         int score = new Scanner(System.in).nextInt();
 
         while (score < 0 || score > 100){
