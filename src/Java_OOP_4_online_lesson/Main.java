@@ -37,6 +37,16 @@ public class Main {
         engines.add(new Bike());
         engines.add(new Bike());
 
+        // static public LinkedList<Drive> getEngines(){
+        //
+        //      LinkedList<String> engines = new LinkedList<>();
+        //
+        //      for (int i = 0; i < 467; i++)
+        //          {
+        //              engines.add(new Car();
+        //          }
+        // }
+
 
         return engines;
     }
