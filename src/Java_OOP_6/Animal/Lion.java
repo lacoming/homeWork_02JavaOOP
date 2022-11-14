@@ -16,13 +16,12 @@ public class Lion extends Animal {
 
     @Override
     public void breath() {
-        System.out.println("Дышит легкими, может рычать.");
+        System.out.println("Дышу легкими, а ещё могу рычать! АГРРР!!");
     }
 
     @Override
     public void move() {
-        System.out.println("Передвигается на четырех лапах, может быстро бегать и прыгать.");
+        System.out.println("Стою твёрдо на четырёх лапах, так что могу быстро бегать и прыгать!");
     }
-
 
 }

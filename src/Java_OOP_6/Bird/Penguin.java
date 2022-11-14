@@ -16,6 +16,6 @@ public class Penguin extends Bird {
 
     @Override
     public void move (){
-        System.out.println("Ходить на задних лапах, плавать под водой.");
+        System.out.println("Могу ходить на задних лапах, и плавать, задержав дыхание, под водой.");
     }
 }

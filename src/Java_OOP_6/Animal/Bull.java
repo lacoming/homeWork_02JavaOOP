@@ -16,13 +16,12 @@ public class Bull extends Animal {
 
     @Override
     public void breath (){
-        System.out.println("Дышит легкими, может пыжить носом.");
+        System.out.println("Дышу легкими, а ещё могу пыжить носом. Пшшшш!!");
     }
 
     @Override
     public void move (){
-        System.out.println("Парнокопытное, может скакать и бодаться.");
+        System.out.println("Я парнокопытный, могу скакать и бодаться!");
     }
-
 
 }

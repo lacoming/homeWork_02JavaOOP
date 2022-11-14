@@ -34,21 +34,24 @@ public class Main {
 
         Skills[] skills = generateSkills();
 
-        System.out.println("Напишите номер, понравившегося существа: ");
-
         for (int i = 0; i < skills.length; i++){
 
-            System.out.println((i) + " " + skills[i].getName());
+            System.out.println((i+1) + " " + skills[i].getName());
         }
+
+        System.out.println();
+        System.out.println("Напишите номер, понравившегося существа: ");
 
         Scanner scan = new Scanner(System.in);
 
         int number = scan.nextInt();
+        number = number - 1;
 
         for (int i = 0; i < skills.length; i++){
             if(number == i) {
-                skills[i].move();
+                System.out.println(skills[i].getName());
                 skills[i].breath();
+                skills[i].move();
             }
         }
 

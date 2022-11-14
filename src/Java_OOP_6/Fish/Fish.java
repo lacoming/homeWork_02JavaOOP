@@ -5,7 +5,7 @@ import Java_OOP_6.Skills;
 
 public class Fish extends Personal_Card implements Skills {
 
-    private final String name = "РЫБЫ";
+    private final String name = "РЫБА";
 
     @Override
     public String getName() {
@@ -19,12 +19,12 @@ public class Fish extends Personal_Card implements Skills {
 
     @Override
     public void breath() {
-        System.out.println("Жабрами");
+        System.out.println("Дышу очень просто - Жабрами");
     }
 
     @Override
     public void move() {
-        System.out.println("Может плыть, выпрыгивать из воды.");
+        System.out.println("Могу плыть, могу не плыть. О, еще иногда люблю выпрыгивать из воды.");
     }
 
 
