@@ -45,7 +45,7 @@ public class Menu implements Action {
     public Personal_Card action(Personal_Card person) {
 
         int number;
-        int year;
+        int year = 0;
 
         Scanner input = new Scanner(System.in);
 
@@ -62,7 +62,7 @@ public class Menu implements Action {
                 case 1:
                     System.out.print("Введите ваше имя: ");
 
-                    String name = input.nextLine();
+                    String name = input.next();
 
                     person.setName(name);
 
@@ -72,8 +72,7 @@ public class Menu implements Action {
                 case 2:
                     System.out.print("Введите фамилию: ");
 
-                    person.setLastName(input.nextLine());
-
+                    person.setLastName(input.next());
 
                     System.out.println("Ваша фамилия добавлена!");
                     break;
@@ -81,14 +80,16 @@ public class Menu implements Action {
                 case 3:
                     System.out.print("Введите год рождения: ");
 
-                    do {
+                    while (year < 1830) {
+
                         year = input.nextInt();
 
                         if (year > 1830) {
                             person.setBirthday(year);
                         }
+                        else System.out.println("Ох, ты ёшки-трёшки! Столько не живут, давай ещё раз попробуем");
 
-                    } while (year > 1830);
+                    }
 
                     System.out.println("Вы ввели год рождения!");
                     break;
