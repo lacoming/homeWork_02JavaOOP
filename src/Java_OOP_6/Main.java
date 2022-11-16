@@ -44,6 +44,8 @@ public class Main {
 
         Scanner scan = new Scanner(System.in);
 
+        // TODO переписать на ENUM
+
         int number = scan.nextInt();
         number = number - 1;
 

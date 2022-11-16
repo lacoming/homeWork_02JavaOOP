@@ -3,6 +3,8 @@ package Java_OOP_6.Fish;
 import Java_OOP_6.Personal_Card;
 import Java_OOP_6.Skills;
 
+// TODO переписать на абстрактный
+
 public class Fish extends Personal_Card implements Skills {
 
     private final String name = "РЫБА";
