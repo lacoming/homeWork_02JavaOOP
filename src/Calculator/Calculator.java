@@ -6,8 +6,8 @@ public class Calculator {
 
     private double result; // TODO: Impl me!
 
-    private static final double MAX_VALUE = 1.7976931348623157E308;
-    private static final double MIN_VALUE = -1.7976931348623157E308;
+    private static final double MAX_VALUE = Double.MAX_VALUE;
+    private static final double MIN_VALUE = Double.MIN_VALUE;
 
     public double add(double a, double b){
 
@@ -23,9 +23,10 @@ public class Calculator {
 
         result = a - b;
 
-        if (result < MIN_VALUE){
-            throw new ArithmeticException("Слишком маленькое число");
-        }
+        // if (result < MIN_VALUE){
+        //  throw new ArithmeticException("Слишком маленькое число");
+        // }
+        // TODO Разобраться почему не работает
         return result;
     }
 
@@ -33,13 +34,13 @@ public class Calculator {
 
         result = a * b;
 
-        if (result > MAX_VALUE){
+       /* if (result > MAX_VALUE){
             throw new ArithmeticException("Слишком большое число");
         }
 
         if (result < MIN_VALUE){
             throw new ArithmeticException("Слишком маленькое число");
-        }
+        }*/
 
         return result;
     }
