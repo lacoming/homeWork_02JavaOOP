@@ -1,5 +1,6 @@
 package Calculator;
 
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -11,7 +12,6 @@ import static org.testng.AssertJUnit.assertEquals;
 public class TestCalculator {
 
     private final Calculator calculator = new Calculator();
-
     Properties prop = new Properties();
     FileInputStream input;
     private double number1;
@@ -19,9 +19,8 @@ public class TestCalculator {
     private double result;
     private String error;
 
-
-    @Test
-    void addTest(){
+    @BeforeMethod
+    void readingPropertiesFile (){
 
         try {
             input = new FileInputStream("src/Calculator/Tests.properties");
@@ -30,22 +29,33 @@ public class TestCalculator {
         }
         try {
             prop.load(input);
+            number1 = Double.parseDouble(prop.getProperty("simple1"));
+            number2 = Double.parseDouble(prop.getProperty("simple2"));
         } catch (IOException e) {
             throw new RuntimeException("Файл пуст");
         }
+    }
 
-        number1 = Double.parseDouble(prop.getProperty("simple1"));
-        number2 = Double.parseDouble(prop.getProperty("simple2"));
+    @Test
+    void addTestSimple(){
+
         result = Double.parseDouble(prop.getProperty("resultSimpleAdd"));
-
         assertEquals("Сложение выполнено неверно",result, calculator.add(number1, number2));
+    }
+
+    @Test
+    void addTestMaxOne(){
 
         number1 = Double.parseDouble(prop.getProperty("max"));
-
         error = prop.getProperty("resultMax");
-
         assertEquals("Значение не вышло за рамки", number1, calculator.add(number1, 1.0));
+    }
 
+
+    @Test
+    void addTestMaxMax(){
+
+        number1 = Double.parseDouble(prop.getProperty("max"));
         try {
             assertEquals("Значение не вышло за рамки", error, calculator.add(number1, number1));
         } catch (ArithmeticException ex){
@@ -55,29 +65,24 @@ public class TestCalculator {
     }
 
     @Test
-    void subTest(){
+    void subTestSimple(){
 
-        try {
-            input = new FileInputStream("src/Calculator/Tests.properties");
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException("Файл не найден");
-        }
-        try {
-            prop.load(input);
-        } catch (IOException e) {
-            throw new RuntimeException("Файл пуст");
-        }
-
-        number1 = Double.parseDouble(prop.getProperty("simple1"));
-        number2 = Double.parseDouble(prop.getProperty("simple2"));
         result = Double.parseDouble(prop.getProperty("resultSimpleSub"));
-
         assertEquals("Вычитание неверное", result, calculator.sub(number1, number2));
+
+    }
+
+    @Test
+    void subTestSimpleMinus(){
 
         number2 = Double.parseDouble(prop.getProperty("simple3"));
         result = Double.parseDouble(prop.getProperty("resultSimpleSub2"));
-
         assertEquals("Вычитание неверное", result, calculator.sub(number1, number2));
+
+    }
+
+    @Test
+    void subTestMin(){
 
         number1 = Double.parseDouble(prop.getProperty("min"));
         result = Double.parseDouble(prop.getProperty("resultMin"));
@@ -91,42 +96,80 @@ public class TestCalculator {
     }
 
     @Test
-    void mulTest(){
-        try {
-            input = new FileInputStream("src/Calculator/Tests.properties");
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException("Файл не найден");
-        }
-        try {
-            prop.load(input);
-        } catch (IOException e) {
-            throw new RuntimeException("Файл пуст");
-        }
+    void mulTestSimple(){
 
-        number1 = Double.parseDouble(prop.getProperty("simple1"));
-        number2 = Double.parseDouble(prop.getProperty("simple2"));
         result = Double.parseDouble(prop.getProperty("resultSimpleMul"));
-
         assertEquals("Умножение неверное", result, calculator.mul(number1, number2));
+
+    }
+
+    @Test
+    void mulTestSimpleMinus(){
 
         number1 = Double.parseDouble(prop.getProperty("simple3"));
         result = Double.parseDouble(prop.getProperty("resultSimpleMul2"));
-
         assertEquals("Умножение с отрицательным числом неверное", result, calculator.mul(number1, number2));
 
+    }
+
+    @Test
+    void mulTestSimpleDoubleMinus(){
+
+        number1 = Double.parseDouble(prop.getProperty("simple3"));
         result = Double.parseDouble(prop.getProperty("resultSimpleMul3"));
         assertEquals("Умножение с отрицательным числом неверное", result, calculator.mul(number1, number1));
 
+    }
+
+    @Test
+    void mulTestInfinity(){
+
         number1 = Double.parseDouble(prop.getProperty("max"));
         result = Double.parseDouble(prop.getProperty("resultMax"));
-
         assertEquals("Бесконечность не вышла", result, calculator.mul(number1, number1));
 
     }
 
 
     @Test
-    void divTest(){
+    void divTestSimple(){
+
+        result = Double.parseDouble(prop.getProperty("resultSimpleDiv"));
+        assertEquals("Обычное деление не вышло", result, calculator.div(number1, number2));
+
+    }
+
+    @Test
+    void divTestSimpleMinus(){
+
+        number1 = Double.parseDouble(prop.getProperty("simple3"));
+        number2 = Double.parseDouble(prop.getProperty("simple4"));
+        result = Double.parseDouble(prop.getProperty("resultSimpleDiv2"));
+        assertEquals("Деление с отрицательным числом не вышло", result, calculator.div(number1, number2));
+
+    }
+
+    @Test
+    void divTestZeroFirst(){
+
+        number1 = Double.parseDouble(prop.getProperty("zero"));
+        result = Double.parseDouble(prop.getProperty("resultSimpleDiv2"));
+        assertEquals("Не смогли разделить ноль", result, calculator.div(number1, number2));
+
+    }
+
+    @Test
+    void divTestZeroSecond(){
+        try {
+            number2 = Double.parseDouble(prop.getProperty("zero"));
+            result = Double.parseDouble(prop.getProperty("resultSimpleDiv2"));
+        } catch (ArithmeticException exception){
+            System.out.println("На ноль делить нельзя!");
+        }
+    }
+
+    @Test
+    void powTestSimple(){
 
     }
 
