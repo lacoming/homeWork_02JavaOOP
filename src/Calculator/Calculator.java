@@ -4,7 +4,7 @@ import java.security.InvalidParameterException;
 
 public class Calculator {
 
-    private double result; // TODO: Impl me!
+    private static double result; // TODO: Impl me!
 
     private static final double MAX_VALUE = Double.MAX_VALUE;
     private static final double MIN_VALUE = Double.MIN_VALUE;
@@ -26,7 +26,8 @@ public class Calculator {
         // if (result < MIN_VALUE){
         //  throw new ArithmeticException("Слишком маленькое число");
         // }
-        // TODO Разобраться почему не работает
+        // TODO: Разобраться почему не работает
+
         return result;
     }
 
@@ -52,7 +53,7 @@ public class Calculator {
         return a/b;
     }
 
-    public double pow(double a, long pow){
+    public double pow(double a, double pow){
         // TODO: Impl me!
         // Math or cycle
 
@@ -60,10 +61,6 @@ public class Calculator {
 
         if (result > MAX_VALUE){
             throw new ArithmeticException("Слишком большое число");
-        }
-
-        if (result < MIN_VALUE){
-            throw new ArithmeticException("Слишком маленькое число");
         }
 
         return result;
@@ -75,4 +72,9 @@ public class Calculator {
         }
         return Math.sqrt(a);
     }
+
+    public void calculation(){
+
+    }
+
 }

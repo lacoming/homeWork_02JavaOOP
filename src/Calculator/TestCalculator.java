@@ -47,7 +47,6 @@ public class TestCalculator {
     void addTestMaxOne(){
 
         number1 = Double.parseDouble(prop.getProperty("max"));
-        error = prop.getProperty("resultMax");
         assertEquals("Значение не вышло за рамки", number1, calculator.add(number1, 1.0));
     }
 
@@ -55,6 +54,7 @@ public class TestCalculator {
     @Test
     void addTestMaxMax(){
 
+        error = prop.getProperty("resultMax");
         number1 = Double.parseDouble(prop.getProperty("max"));
         try {
             assertEquals("Значение не вышло за рамки", error, calculator.add(number1, number1));
@@ -153,7 +153,7 @@ public class TestCalculator {
     void divTestZeroFirst(){
 
         number1 = Double.parseDouble(prop.getProperty("zero"));
-        result = Double.parseDouble(prop.getProperty("resultSimpleDiv2"));
+        result = Double.parseDouble(prop.getProperty("zero"));
         assertEquals("Не смогли разделить ноль", result, calculator.div(number1, number2));
 
     }
@@ -171,7 +171,89 @@ public class TestCalculator {
     @Test
     void powTestSimple(){
 
+        number2 = Double.parseDouble(prop.getProperty("simple4"));
+        result = Double.parseDouble(prop.getProperty("resultSimplePow"));
+        assertEquals("Возведение в степень неверное", result, calculator.pow(number1, number2));
+
     }
 
+    @Test
+    void powTestMinus(){
+
+        number2 = Double.parseDouble(prop.getProperty("simple3"));
+        result = Double.parseDouble(prop.getProperty("resultMinusPow"));
+        assertEquals("Возведение в отрицательную степень неверное", result, calculator.pow(number1, number2));
+
+    }
+
+    @Test
+    void powTestZero(){
+
+        number2 = Double.parseDouble(prop.getProperty("zero"));
+        result = Double.parseDouble(prop.getProperty("resultZeroPow"));
+        assertEquals("Возведение в нулевую степень неверное", result, calculator.pow(number1, number2));
+
+    }
+
+    @Test
+    void powTesNotIneger(){
+
+        number2 = Double.parseDouble(prop.getProperty("notInteger"));
+        result = Double.parseDouble(prop.getProperty("resultNotIntegerPow"));
+        assertEquals("Возведение в нулевую степень неверное", result, calculator.pow(number1, number2));
+
+    }
+
+    @Test
+    void powTestMaxMax(){
+
+        error = prop.getProperty("resultMax");
+        number1 = Double.parseDouble(prop.getProperty("max"));
+        try {
+            assertEquals("Значение не вышло за рамки", error, calculator.pow(number1, number1));
+        } catch (ArithmeticException ex){
+            System.out.println("Выброшено исключение: слишком большое число");
+        }
+
+    }
+
+    @Test
+    void sqrTestSimple(){
+
+        number1 = Double.parseDouble(prop.getProperty("simple5"));
+        result = Double.parseDouble(prop.getProperty("resultSimpleSqr"));
+        assertEquals("Корень не извлечён", result, calculator.sqr(number1));
+
+    }
+
+    @Test
+    void sqrTestNotSimple(){
+
+        number1 = Double.parseDouble(prop.getProperty("simple4"));
+        result = Double.parseDouble(prop.getProperty("resultNotSimpleSqr"));
+        assertEquals("Корень не извлечён", result, calculator.sqr(number1));
+
+    }
+
+    @Test
+    void sqrTestZero(){
+
+        number1 = Double.parseDouble(prop.getProperty("zero"));
+        result = Double.parseDouble(prop.getProperty("zero"));
+        assertEquals("Корень не извлечён", result, calculator.sqr(number1));
+
+    }
+
+    @Test
+    void sqrTestMinusNumber(){
+
+        number1 = Double.parseDouble(prop.getProperty("simple3"));
+        try {
+            assertEquals("Чудом корень извлёкся", error, calculator.sqr(number1));
+        } catch (ArithmeticException ex){
+            System.out.println("Выброшено исключение: нельзя извлекать корень из отрицательного числа");
+        }
+
+    }
 
 }
