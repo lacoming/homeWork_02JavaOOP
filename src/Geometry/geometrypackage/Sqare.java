@@ -1,12 +1,12 @@
 package Geometry.geometrypackage;
 
-public class Sqare implements Shape{
+public class Sqare implements Shape {
 
-    public Sqare(){
+    public Sqare() {
         length = 0;
     }
 
-    public Sqare(double _length){
+    public Sqare(double _length) {
         length = _length;
     }
 

@@ -1,12 +1,12 @@
 package Geometry.geometrypackage;
 
-public class Rectangle implements Shape{
+public class Rectangle implements Shape {
 
-    public Rectangle(){
+    public Rectangle() {
         length = 0;
     }
 
-    public Rectangle(double _length, double _high){
+    public Rectangle(double _length, double _high) {
         length = _length;
         high = _high;
     }

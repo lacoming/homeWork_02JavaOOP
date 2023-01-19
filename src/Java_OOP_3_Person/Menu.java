@@ -9,6 +9,10 @@ public class Menu implements Action {
     private final String INFORMATION = "4. Вывести информацию ";
     private final String EXIT = "0. Выход ";
 
+    public Menu(){
+        showMenu();
+    }
+
 
     public String getENTER_NAME() {
         return ENTER_NAME;

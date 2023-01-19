@@ -3,9 +3,11 @@ package Geometry.geometrypackage;
 
 public class Tetrahedron implements Shape {
 
-    public Tetrahedron() {length = 0;}
+    public Tetrahedron() {
+        length = 0;
+    }
 
-    public Tetrahedron(double _length){
+    public Tetrahedron(double _length) {
         length = _length;
     }
 
@@ -13,12 +15,12 @@ public class Tetrahedron implements Shape {
         return length;
     }
 
-    public void setLength(double _length){
+    public void setLength(double _length) {
         length = _length;
     }
 
     @Override
-    public double getArea(){
+    public double getArea() {
         return Math.sqrt(3) * length * length;
     }
 

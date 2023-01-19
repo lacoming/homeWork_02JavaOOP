@@ -6,6 +6,19 @@ public class Personal_Card {
     private String lastName;
     private int birthday;
 
+    public Personal_Card(String name){
+        this.name = name;
+    }
+    public Personal_Card(String name, String lastName){
+        this.name = name;
+        this.lastName = lastName;
+    }
+    public Personal_Card(String name, String lastName, int birthday){
+        this.name = name;
+        this.lastName = lastName;
+        this.birthday = birthday;
+    }
+
 
     public String getName() {
         return name;

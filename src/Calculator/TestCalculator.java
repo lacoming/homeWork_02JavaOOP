@@ -31,9 +31,22 @@ public class TestCalculator {
             prop.load(input);
             number1 = Double.parseDouble(prop.getProperty("simple1"));
             number2 = Double.parseDouble(prop.getProperty("simple2"));
+
         } catch (IOException e) {
             throw new RuntimeException("Файл пуст");
+
+        } finally {
+            try{
+                if(input != null)
+                    input.close();
+            }
+            catch(IOException ex){
+                System.out.println(ex.getMessage());
+            }
         }
+
+        calculator.resetCalculation();
+
     }
 
     @Test
