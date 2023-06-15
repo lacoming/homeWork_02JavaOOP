@@ -4,7 +4,7 @@ import java.security.InvalidParameterException;
 
 public class Calculator {
 
-    private static double result = 0; // TODO: Impl me!
+    private static double result = 0;
 
     private final double MAX_VALUE = Double.MAX_VALUE;
     private final double MIN_VALUE = Double.MIN_VALUE;
@@ -83,8 +83,6 @@ public class Calculator {
     }
 
     public double pow(double a, double pow){
-        // TODO: Impl me!
-        // Math or cycle
 
         if (result == 0) {
             result = Math.pow(a, pow);

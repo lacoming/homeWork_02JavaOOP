@@ -1,14 +1,11 @@
 package Geometry.geometrypackage;
 
 public class Rectangle implements Shape {
+    private double length;
+    private double high;
 
     public Rectangle() {
         length = 0;
-    }
-
-    public Rectangle(double _length, double _high) {
-        length = _length;
-        high = _high;
     }
 
     @Override
@@ -32,6 +29,10 @@ public class Rectangle implements Shape {
         return high;
     }
 
-    private double length;
-    private double high;
+    public Rectangle(double _length, double _high) {
+        length = _length;
+        high = _high;
+    }
+
+
 }
