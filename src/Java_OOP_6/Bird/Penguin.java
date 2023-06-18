@@ -1,7 +1,6 @@
 package Java_OOP_6.Bird;
 
 public class Penguin extends Bird {
-
     private final String name = "ПИНГВИН";
 
     @Override
@@ -15,7 +14,7 @@ public class Penguin extends Bird {
     }
 
     @Override
-    public void move (){
+    public void move() {
         System.out.println("Могу ходить на задних лапах, и плавать, задержав дыхание, под водой.");
     }
 }

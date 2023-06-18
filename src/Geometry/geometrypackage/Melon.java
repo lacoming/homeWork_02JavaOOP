@@ -7,16 +7,16 @@ public class Melon implements Shape {
         return weight;
     }
 
-    public void setWeight(double _weight) {
-        weight = _weight;
+    public void setWeight(double weight) {
+        this.weight = weight;
     }
 
     public Melon() {
         weight = 0;
     }
 
-    public double Melon(double _weight) {
-        weight = _weight;
+    public double Melon(double weight) {
+        this.weight = weight;
         return weight;
     }
 

@@ -24,9 +24,9 @@ public class Rectangle implements Shape {
         length = 0;
     }
 
-    public Rectangle(double _length, double _high) {
-        length = _length;
-        high = _high;
+    public Rectangle(double length, double high) {
+        this.length = length;
+        this.high = high;
     }
 
     @Override

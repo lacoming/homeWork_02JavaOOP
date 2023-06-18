@@ -10,5 +10,4 @@ public class Personal_Card {
     public void setName(String name) {
         this.name = name;
     }
-
 }

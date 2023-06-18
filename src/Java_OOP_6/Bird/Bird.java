@@ -3,10 +3,7 @@ package Java_OOP_6.Bird;
 import Java_OOP_6.Personal_Card;
 import Java_OOP_6.Skills;
 
-// TODO переписать на абстрактный
-
 public class Bird extends Personal_Card implements Skills {
-
     private String name = "ПТИЦА";
 
     @Override
@@ -28,6 +25,4 @@ public class Bird extends Personal_Card implements Skills {
     public void move() {
         System.out.println("Могу летать, ходить, прыгать и даже бегать.");
     }
-
-
 }

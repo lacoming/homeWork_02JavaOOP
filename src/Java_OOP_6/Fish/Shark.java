@@ -1,7 +1,6 @@
 package Java_OOP_6.Fish;
 
-public class Shark extends Fish{
-
+public class Shark extends Fish {
     private final String name = "АКУЛА";
 
     @Override
@@ -15,7 +14,7 @@ public class Shark extends Fish{
     }
 
     @Override
-    public void move () {
+    public void move() {
         System.out.println("Плаваю под водой, и, как любой хищник, ем других существ.");
     }
 

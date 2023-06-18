@@ -1,6 +1,6 @@
 package Geometry.geometrypackage;
 
-public class Sqare implements Shape {
+public class Square implements Shape {
     private double length;
 
     public double getLength() {
@@ -11,12 +11,12 @@ public class Sqare implements Shape {
         this.length = length;
     }
 
-    public Sqare() {
+    public Square() {
         length = 0;
     }
 
-    public Sqare(double _length) {
-        length = _length;
+    public Square(double length) {
+        this.length = length;
     }
 
     @Override

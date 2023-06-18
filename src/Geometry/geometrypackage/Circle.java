@@ -1,6 +1,6 @@
 package Geometry.geometrypackage;
 
-public class Cicle implements Shape {
+public class Circle implements Shape {
     static final double PI = 3.14;
     private double radius;
 
@@ -12,18 +12,16 @@ public class Cicle implements Shape {
         this.radius = radius;
     }
 
-    public Cicle() {
+    public Circle() {
         radius = 0;
     }
 
-    public Cicle(double _radius) {
-        radius = _radius;
+    public Circle(double radius) {
+        this.radius = radius;
     }
-
 
     @Override
     public double getArea() {
-        //return PI * radius * radius;
         return PI * Math.pow(radius, 2);
     }
 

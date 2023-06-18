@@ -1,7 +1,6 @@
 package Java_OOP_6.Fish;
 
-public class Pike extends Fish{
-
+public class Pike extends Fish {
     private final String name = "ЩУКА";
 
     @Override

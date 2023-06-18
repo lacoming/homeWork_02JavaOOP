@@ -12,12 +12,12 @@ public class Tetrahedron implements Shape {
         return length;
     }
 
-    public void setLength(double _length) {
-        length = _length;
+    public void setLength(double length) {
+        this.length = length;
     }
 
-    public Tetrahedron(double _length) {
-        length = _length;
+    public Tetrahedron(double length) {
+        this.length = length;
     }
 
     @Override

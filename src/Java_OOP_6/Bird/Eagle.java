@@ -1,7 +1,6 @@
 package Java_OOP_6.Bird;
 
-public class Eagle extends  Bird{
-
+public class Eagle extends Bird {
     private final String name = "ОРЁЛ";
 
     @Override
@@ -15,7 +14,7 @@ public class Eagle extends  Bird{
     }
 
     @Override
-    public void move (){
+    public void move() {
         System.out.println("Могу летать, цепляться когтями за ветви и немного ходить.");
     }
 
