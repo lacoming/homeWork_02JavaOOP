@@ -3,19 +3,14 @@ package Geometry;
 import Geometry.geometrypackage.*;
 
 public class Main {
-
-
     public static void main(String[] args) {
-
         double comulativeArea = 0;
         for (Shape shape : generateShapes()) {
             System.out.println(shape.getArea());
             comulativeArea += shape.getArea();
         }
         System.out.println(comulativeArea);
-
     }
-
     private static Shape[] generateShapes() {
         Shape[] shapes = new Shape[15]; // 25
 
@@ -35,7 +30,6 @@ public class Main {
             shapes[i] = new Melon();
         }
         return shapes;
-
     }
 }
 

@@ -1,9 +1,7 @@
 package Geometry.geometrypackage;
 
 public class Melon implements Shape {
-    public Melon() {
-        weight = 0;
-    }
+    private double weight;
 
     public double getWeight() {
         return weight;
@@ -11,6 +9,10 @@ public class Melon implements Shape {
 
     public void setWeight(double _weight) {
         weight = _weight;
+    }
+
+    public Melon() {
+        weight = 0;
     }
 
     public double Melon(double _weight) {
@@ -24,5 +26,5 @@ public class Melon implements Shape {
         return 0;
     }
 
-    private double weight;
+
 }

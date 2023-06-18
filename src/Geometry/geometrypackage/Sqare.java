@@ -1,6 +1,15 @@
 package Geometry.geometrypackage;
 
 public class Sqare implements Shape {
+    private double length;
+
+    public double getLength() {
+        return length;
+    }
+
+    public void setLength(double length) {
+        this.length = length;
+    }
 
     public Sqare() {
         length = 0;
@@ -15,13 +24,5 @@ public class Sqare implements Shape {
         return length * length;
     }
 
-    public void setLength(double length) {
-        this.length = length;
-    }
 
-    public double getLength() {
-        return length;
-    }
-
-    private double length;
 }

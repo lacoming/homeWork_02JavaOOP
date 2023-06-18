@@ -7,8 +7,8 @@ public enum ButtonsOfMenu {
     FIND("4. Найти книгу"),
     EXIT("0. Выход");
 
-
     final String book;
+
     ButtonsOfMenu(String book) {
         this.book = book;
     }

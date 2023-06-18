@@ -3,7 +3,7 @@ package Java_OOP_4;
 import java.util.ArrayList;
 
 public class Catalog {
-    private ArrayList<Book> catalog = new ArrayList<Book>();
+    private ArrayList<Book> catalog = new ArrayList<>();
 
     public ArrayList<Book> getCatalog() {
         return catalog;
@@ -47,8 +47,8 @@ public class Catalog {
         }
     }
 
-    public void showAllNamesOfBooks(){
-        for(Book book : catalog){
+    public void showAllNamesOfBooks() {
+        for (Book book : catalog) {
             System.out.println(book.getName());
         }
     }
