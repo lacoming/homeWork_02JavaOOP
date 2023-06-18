@@ -3,9 +3,7 @@ package Java_OOP_6.Animal;
 import Java_OOP_6.Personal_Card;
 import Java_OOP_6.Skills;
 
-// TODO переписать на абстрактный
-
-public class Animal extends Personal_Card implements Skills{
+public class Animal extends Personal_Card implements Skills {
 
     private final String name = "ЗВЕРЬ";
 
