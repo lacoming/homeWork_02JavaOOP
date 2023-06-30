@@ -5,11 +5,11 @@ public class Remote {
 
     public void tvProgram (){
 
-        String [] tv_program = new String [100];
+        String [] tvProgram = new String [100];
         int channel;
 
-        for (int i = 1; i < tv_program.length; i++){
-            tv_program[i] = "Channel " + i;
+        for (int i = 1; i < tvProgram.length; i++){
+            tvProgram[i] = "Channel " + i;
         }
 
         Scanner input = new Scanner(System.in);
@@ -21,7 +21,7 @@ public class Remote {
 
         for (int i = 1; i <= 100; i++){
            if(i == channel){
-               System.out.println("You watching " + tv_program[i]);
+               System.out.println("You watching " + tvProgram[i]);
            }
         }
     }
